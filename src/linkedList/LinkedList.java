@@ -176,12 +176,19 @@ public class LinkedList {
     for (int i = 0; i < A.length; i++){
       inserAtIndex( i, A[i]);
     }
+
+    int totalNodes = 0;
+    for (Node temp = head; temp != null; temp= temp.next){
+      totalNodes++;
+    }
+    System.out.println("Total nodes are"+ totalNodes);
   }
 
   public void printAndRefresh(int [] A) {
     print();
     truncate();
     createFromArray(A);
+
   }
 
 }
