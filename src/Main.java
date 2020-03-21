@@ -1,19 +1,22 @@
-import java.util.ArrayList;
-import linkedList.LinkedList;
-import linkedList.SLLUtil;
-import practiceJava.JavaCollections;
+import linkedList.SLLProblems;
 import projecteuler.ProjectEulerSet1;
 
 public class Main {
 
 
   public static void main(String[] args) {
+    // https://github.com/SirGnip/JavaCheatSheets/tree/master/src
 
 //    JavaCollections jc = new JavaCollections();
 //    jc.performArrayListOperations();
 //    jc.performHashMapOperations();
 //    ProjectEulerTest();
-      linkedListTest();
+    try{
+    } catch (Exception ex){
+      System.out.println("parent");
+    }
+
+
 
   }
   private static void ProjectEulerTest() {
@@ -32,26 +35,6 @@ public class Main {
 
   }
 
-  private static void linkedListTest() {
-    int[] A = {1,2,3,4,5,6};
-    LinkedList ll = new LinkedList();
-
-    SLLUtil sslu = new SLLUtil();
-
-    ll.createFromArray(A);
-    /*ll.print();
-
-
-
-    // Reversing a linked list
-    ll.setHead(sslu.recReverse(ll.getHead()));
-    ll.printAndRefresh(A);
-
-    // Reverse in set of K
-    ll.setHead(sslu.reverseInSetOfK(ll.getHead(), 2));
-    ll.printAndRefresh(A);*/
-    //    System.out.println(sslu.isPalindromeRecUtil(ll.getHead(),ll.getHead()));
-  }
 
 
 }

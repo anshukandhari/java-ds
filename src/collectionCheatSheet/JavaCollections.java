@@ -1,16 +1,18 @@
-package practiceJava;
+package collectionCheatSheet;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
-import java.util.ListIterator;
-import sun.awt.SunHints.Value;
+import java.util.Stack;
 
 
 public class JavaCollections {
+
+  // To compare 2 non-primitive data type use .equals i.e. stack1.peek() == stack2.peek() will fail
+  // https://github.com/SirGnip/JavaCheatSheets/tree/master/src
+  // https://github.com/nlharri/JavaCollectionsFrameworkCheatSheet/blob/master/javacollectionsframeworkexamples/JavaCollectionsFrameworkExamples.java
+
+
   /** Reading input
    *
    *  Scanner scan = new Scanner(System.in);
@@ -35,41 +37,6 @@ public class JavaCollections {
    *
    */
   public void performArrayListOperations(){
-    Integer[] A = {4,6,2,3};
-    ArrayList<Integer> al = new ArrayList();
-    al.add(3);
-    al.add(10);
-    al.add(18);
-    al.add(11);
-    al.add(15);
-    al.add(19);
-    al.add(al.size(),-1);
-    al.set(al.size()-1, 13);
-    al.removeIf(o -> (o%19==0));
-    al.remove(3);
-
-    System.out.println(al);
-
-
-    ArrayList<Integer> a2 = new ArrayList<>(Arrays.asList(A));
-
-    al.addAll(3,a2);
-    System.out.println(al);
-    Collections.sort(al);
-//    Collections.reverse(al);
-    System.out.println(al);
-    System.out.printf("The size of the Arraylist is %d, index of 18 is %d and index of 10 is %d", al.size(), al.indexOf(18), al.indexOf(120));
-
-
-    ListIterator<Integer> itr = al.listIterator();
-    int x =0;
-    while(itr.hasNext()){
-//      x = itr.next();
-      itr.forEachRemaining(System.out::println);
-//      if(al.indexOf(26-x) > 0 ){
-//        System.out.println(x);
-    }
-
 
 //    al.sort();
 
@@ -117,17 +84,45 @@ public class JavaCollections {
     public void stringOperations() {
       String s = "Techie Delight";
 
+      int length = s.length();
+
+
       // convert String to char[] array
       char[] chars = s.toCharArray();
 
+      // we can use s.charAt(i) also to get the characters
+
+
       // iterate over char[] array using enhanced for loop
       for (char ch : chars) {
+
         System.out.print(ch);
+
       }
+
 
       HashSet hs = new HashSet();
 //      String s = "Anshu";
 
     }
+
+
+    public void stackOperations(){
+      Stack<Character> s = new Stack<>();
+    }
+
+    public void heapOperation(){
+
+    }
+
+  public static void main(String[] args) {
+    ArrayList<Integer> al = new ArrayList<>();
+    al.add(0,12);
+    al.add(1,10);
+    al.add(0,101);
+    JavaCollections jc = new JavaCollections();
+    jc.heapOperation();
+
+  }
 
 }

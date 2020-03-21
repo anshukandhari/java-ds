@@ -1,6 +1,9 @@
 package Utilities;
 
+import java.util.Stack;
+
 public class MathUtils {
+
   public boolean isPalindrome(int n) {
     if(n<10){
       return true;
